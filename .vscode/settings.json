@@ -1,0 +1,7 @@
+{
+    "remote.extensionKind": {
+        "vscode.typescript-language-features": [
+            "ui"
+        ]
+    }
+}
