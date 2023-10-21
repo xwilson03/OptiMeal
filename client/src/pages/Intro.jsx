@@ -1,9 +1,11 @@
-import "../styles/App.css";
+import "../styles/intro.css";
 
 function Intro() {
   return (
     <div className="Intro">
-      <p>Intro</p>
+      <div id="optimeal_intro">
+        <h1>OptiMeal</h1>
+      </div>
     </div>
   );
 }
