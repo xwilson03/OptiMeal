@@ -1,5 +1,6 @@
 .sidebar {
-    width: 200px;
+    width: 20vh;
+    height: 120vh;
     background-color: #202222;
     position:static;
     top: 60px;
