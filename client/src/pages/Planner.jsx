@@ -1,4 +1,4 @@
-import { Box, Button, Card, Stack } from "@mui/material"
+import { Box, Card, Stack } from "@mui/material"
 import { useState } from "react"
 import "../styles/Planner.css"
 
@@ -48,7 +48,7 @@ function Planner() {
                 <DayCard day="Saturday"  />
             </Stack>
         </Box>
-        <Button className="generateSchedule" variant="contained">Generate Schedule</Button>
+        <button className="generateSchedule">Generate Schedule</button>
     </>
   );
 }
