@@ -4,6 +4,7 @@ import error_img from "../assets/hungry_mane.png";
 const h1Styling = {
   color:'white'
 }
+
 function NoPage() {
   return (
     <div className="NoPage">
