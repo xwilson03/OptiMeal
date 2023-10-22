@@ -1,0 +1,16 @@
+.card {
+    align-items: center;
+    background-color: white !important;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    min-height: 200px;
+    width: 300px;
+}
+  
+.cardGrid {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, 300px);
+}

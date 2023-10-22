@@ -1,0 +1,33 @@
+.recipe{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.food_img{
+    height: 200px;
+    width: 250px;
+}
+
+.recipe_info{
+    width: 40%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+.recipe_info p{
+    padding-left: 10px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    
+}
+.recipe_info img{
+    padding-left: 25%;
+}
+

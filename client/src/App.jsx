@@ -1,11 +1,14 @@
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import "./styles/App.css";
-import axios from "axios";
-import { useState } from "react";
 
 function App() {
   return (
     <div className="App">
-      <p>Yippee :D</p>
+      <Navbar/>
+      <div className="outletContainer">
+        <Outlet/>
+      </div>
     </div>
   );
 }

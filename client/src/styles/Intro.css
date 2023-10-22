@@ -1,0 +1,88 @@
+.intro {
+    animation: fadeInAnimation ease 4s;
+    
+    align-content: center;
+    justify-content: center;
+
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+}
+
+@keyframes fadeInAnimation {
+      0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.introTitle {
+    font-size: 148px;
+    padding-top: 100px;
+    margin: 0px;
+    background-image: linear-gradient(45deg, #93E9BE, #1384bc);
+    
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.introSubtitle {
+    font-size: 24px;
+}
+
+.getStartedButton {
+    padding: 50px;
+}
+
+.getStartedButton button {
+    width: 220px;
+    height: 50px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 15px;
+    font-size: 32px;
+}
+
+.getStartedButton button:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.getStartedButton button:hover:before {
+    opacity: 1;
+}
+
+.getStartedButton button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #242526;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0%, 100% { background-position:    0 0; }
+         50% { background-position: 400% 0; }
+}
