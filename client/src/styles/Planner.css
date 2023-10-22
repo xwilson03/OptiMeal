@@ -5,11 +5,36 @@
     margin: 20px;
 }
 
-.dayCard:hover {
-    transform: scale(1.02);
-    transition: all 0.3s;
+.mealCard {
+    background-color: #28292a !important;
+    width: auto;
+    height: 23%;
+    margin: 20px;
 }
 
-.dayName {
+.mealCard:hover {
+    transform: scale(1.02);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.dayCard h1 {
+    padding-top: 25px;
     color: white;
+}
+
+.dayCard h2 {
+    color: white;
+    text-align: center;
+}
+
+.dayCard h3 {
+    padding-top: 15px;
+    padding-left: 50px;
+    color: white;
+    text-align: left;
+}
+
+.plannerStack {
+    margin: 15vh 5vh;
 }
