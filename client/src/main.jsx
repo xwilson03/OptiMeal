@@ -6,6 +6,7 @@ import Browse    from "./pages/Browse";
 import Groceries from "./pages/Groceries";
 import NoPage    from "./pages/NoPage";
 import Planner   from "./pages/Planner";
+import Recipe    from "./pages/Recipe";
 
 import App from './App'
 
@@ -20,6 +21,7 @@ root.render(
                 <Route path="planner"   element={<Planner   />} />
                 <Route path="browse"    element={<Browse    />} />
                 <Route path="groceries" element={<Groceries />} />
+                <Route path="recipe"    element={<Recipe    />} />
                 <Route path="*"         element={<NoPage    />} />
             </Route>
         </Routes>
