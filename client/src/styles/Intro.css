@@ -15,7 +15,7 @@
     100% { opacity: 1; }
 }
 
-h1 {
+.introTitle {
     font-size: 148px;
     padding-top: 100px;
     margin: 0px;
@@ -29,7 +29,7 @@ h1 {
     -moz-text-fill-color: transparent;
 }
 
-h2 {
+.introSubtitle {
     font-size: 24px;
 }
 

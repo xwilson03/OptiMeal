@@ -7,8 +7,8 @@ import { Container } from '@mui/material';
 function Intro() {
   return (
     <Container className="intro">
-      <h1>OptiMeal</h1>
-      <h2>Your personalized meal planner.</h2>
+      <h1 className="introTitle">OptiMeal</h1>
+      <h2 className="introSubtitle">Your personalized meal planner.</h2>
       <div className="getStartedButton">
         <Link to="/Planner">
           <button>Get Started</button>
