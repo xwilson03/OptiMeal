@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const recipe = require("./routes/Recipe");
+const Recipe = require("./routes/Recipe");
 const cors = require("cors");
 
 
@@ -18,12 +18,6 @@ const PORT = 4000;
 const MONGO_URL = 'mongodb+srv://admin:admin@optimeal.xgmik0f.mongodb.net/?retryWrites=true&w=majority';
 
 
-app.get("/api/", (req, res) => {
-  res.send({"heyo": "skibidi"});
-});
-
-
-// Configures MongoDB connection
 mongoose.connect(MONGO_URL, { dbName: "OptiMeal" })
     .then(() => console.log("DB Connection Successful!"))
     .catch((err) => {
@@ -32,7 +26,9 @@ mongoose.connect(MONGO_URL, { dbName: "OptiMeal" })
 
 app.use(express.json());
 app.use(cors());
-app.use("/api/recipe",recipe);
+app.use("/api/recipes", Recipe);
+
+// Configures MongoDB connection
 
 // const httpsServer = https.createServer(credentials, app);
 // httpsServer.listen(PORT, () => console.log(`Listening on port ${PORT}.`));
