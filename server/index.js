@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const basicModel = require("./routes/BasicModel");
+const recipe = require("./routes/Recipe");
 const cors = require("cors");
 
 
@@ -30,7 +30,7 @@ mongoose.connect(MONGO_URL, { dbName: "OptiMeal" })
 
 app.use(express.json());
 app.use(cors());
-app.use("/api/basicmodel",basicModel);
+app.use("/api/recipe",recipe);
 
 // Configures MongoDB connection
 
