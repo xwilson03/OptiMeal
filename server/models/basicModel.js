@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-const basicModel = new mongoose.schema({
-    id:{type:int ,required:true},
+const basicModel = new mongoose.Schema({
+    id:{type:Number ,required:true},
     title:{type:String, required:true},
     summary:{type:String, required:true},
     vegetarian:{type:Boolean, default:false},

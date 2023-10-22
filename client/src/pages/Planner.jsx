@@ -1,5 +1,5 @@
-import { Card, Stack} from "@mui/material"
-import { State, useState } from "react"
+import { Box, Card, Stack } from "@mui/material";
+import { useState } from "react";
 import "../styles/Planner.css"
 
 const defaultMeals = {"breakfast": "default-breakfast",
@@ -36,15 +36,20 @@ function DayCard(props) {
 
 function Planner() {
   return (
-    <Stack className="plannerStack" direction="row" spacing={3}>
-      <DayCard day="Sunday"    />
-      <DayCard day="Monday"    />
-      <DayCard day="Tuesday"   />
-      <DayCard day="Wednesday" />
-      <DayCard day="Thursday"  />
-      <DayCard day="Friday"    />
-      <DayCard day="Saturday"  />
-    </Stack>
+    <>
+        <Box className="planner">
+            <Stack direction="row" spacing={3}>
+                <DayCard day="Sunday"    />
+                <DayCard day="Monday"    />
+                <DayCard day="Tuesday"   />
+                <DayCard day="Wednesday" />
+                <DayCard day="Thursday"  />
+                <DayCard day="Friday"    />
+                <DayCard day="Saturday"  />
+            </Stack>
+        </Box>
+        <button className="generateSchedule">Generate Schedule</button>
+    </>
   );
 }
 
