@@ -1,6 +1,7 @@
 import "../styles/Sidebar.css";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Stack, Divider, Checkbox } from '@mui/material';
 
 //Renders a sidebar menu with filters for recipes
 
@@ -16,46 +17,36 @@ export default function Sidebar() {
 
   return (
     <div className="sidebar">
-      <div className="sidebarWrapper">
-        <div className="sidebarMenu">
-        <h2 className="sidebarMainTitle">Filters</h2>
+      <h2 className="sidebarMainTitle">Filters</h2>
+      <Stack direction="column" divider={<Divider orientation="horizontal" flexItem />} spacing={2}>
+        <div>
           <h3 className="sidebarTitle">Cuisine</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
-              American
-            </li>
-            <li className="sidebarListItem">
-              Italian
-            </li>
-            <li className="sidebarListItem">
-              Indian
-            </li>
-            <li className="sidebarListItem">
-              Asian
-            </li>
+            <li> <input type="checkbox"/> American </li>
+            <li> <input type="checkbox"/> Italian </li>
+            <li> <input type="checkbox"/> Indian </li>
+            <li> <input type="checkbox"/> Asian </li>
           </ul>
         </div>
-        <div className="sidebarMenu">
+        <div>
           <h3 className="sidebarTitle">Diet</h3>
-            <ul className="sidebarList">
-                <li className="sidebarListItem">
-                    Vegan
-                </li>
-                <li className="sidebarListItem">
-                    Vegetarian
-                </li>
-                
-                <li className="sidebarListItem">
-                    Pescatarian
-                </li>
-            
-                <li className="sidebarListItem">
-                    Keto
-                </li>
-            </ul>
-          <h3 className="sidebarTitle">Macros</h3>
+          <ul className="sidebarList">
+           <li> <input type="checkbox"/> Vegan       </li>
+           <li> <input type="checkbox"/> Vegetarian  </li>
+           <li> <input type="checkbox"/> Pescatarian </li>
+           <li> <input type="checkbox"/> Keto        </li>
+          </ul>
         </div>
-      </div>
+        <div>
+          <h3 className="sidebarTitle">Macros</h3>
+          <ul className="sidebarList">
+           <li> <input type="checkbox"/> Carbs    </li>
+           <li> <input type="checkbox"/> Protein  </li>
+           <li> <input type="checkbox"/> Fat      </li>
+           <li> <input type="checkbox"/> Calories </li>
+          </ul>
+        </div>
+      </Stack>
     </div>
   );
 }

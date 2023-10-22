@@ -1,6 +1,7 @@
-.search-container {
+.searchContainer {
     display: flex;
     width: 80%;
+    height: 100%;
     margin: 0 auto;
     padding: 10px;
     border: 1px solid #ccc;
@@ -8,8 +9,9 @@
     align-items: center;
 }
 
-.inputContainer {
+.searchContainer > input {
     width: 800px;
-    border: none;
-    outline: none;
+    border:#ce0d0d;
+    outline: pink;
+    height: 3000px;
 }
