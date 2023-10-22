@@ -9,9 +9,11 @@ function Intro() {
     <Container className="intro">
       <h1>OptiMeal</h1>
       <h2>Your personalized meal planner.</h2>
-      <Link to="/Planner">
-        <button className="get_started_button">Get Started</button>
-      </Link>
+      <div className="getStartedButton">
+        <Link to="/Planner">
+          <button>Get Started</button>
+        </Link>
+      </div>
     </Container>
   );
 }
