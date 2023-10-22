@@ -5,11 +5,44 @@
     margin: 20px;
 }
 
-.dayCard:hover {
-    transform: scale(1.02);
-    transition: all 0.3s;
+.generateSchedule {
+    width: 200px;
+    height: 50px;
+    justify-content: center;
 }
 
-.dayName {
+.mealCard {
+    background-color: #28292a !important;
+    width: auto;
+    height: 23%;
+    margin: 20px;
+}
+
+.mealCard:hover {
+    transform: scale(1.02);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.dayCard h1 {
+    padding-top: 25px;
     color: white;
+}
+
+.dayCard h2 {
+    color: white;
+    text-align: center;
+}
+
+.dayCard h3 {
+    padding-top: 15px;
+    padding-left: 50px;
+    color: white;
+    text-align: left;
+}
+
+.planner {
+    display: flex;
+    overflow: scroll;
+    margin: 15vh 5vh 5vh;
 }
