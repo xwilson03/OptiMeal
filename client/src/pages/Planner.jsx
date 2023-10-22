@@ -1,11 +1,11 @@
 import { Box, Card, Stack } from "@mui/material";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/Planner.css"
+import axios from 'axios'
 
 const defaultMeals = {"breakfast": "default-breakfast",
                       "lunch":     "default-lunch",
                       "dinner":    "default-dinner"};
-
 
 function DayCard(props) {
 
@@ -35,6 +35,18 @@ function DayCard(props) {
 }
 
 function Planner() {
+
+  useEffect(() => {
+      (async () => {
+        const cardData = await axios.get("https://api.spoontacular.com/mealplanner/generate")
+          .then( (res) => {
+          return res.data;
+          });
+      })();
+    
+      return () => {};
+    }, []);
+
   return (
     <>
         <Box className="planner">
