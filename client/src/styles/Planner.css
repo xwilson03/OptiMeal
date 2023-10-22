@@ -1,11 +1,15 @@
 .dayCard {
-    background-color: #242526;
+    background-color: #242526 !important;
     width: 500px;
     height: 625px;
-    scroll-snap-align: center;
+    margin: 20px;
 }
 
 .dayCard:hover {
     transform: scale(1.02);
     transition: all 0.3s;
+}
+
+.dayName {
+    color: white;
 }
