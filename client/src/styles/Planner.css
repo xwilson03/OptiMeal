@@ -1,0 +1,11 @@
+.dayCard {
+    background-color: #242526;
+    width: 500px;
+    height: 625px;
+    scroll-snap-align: center;
+}
+
+.dayCard:hover {
+    transform: scale(1.02);
+    transition: all 0.3s;
+}
