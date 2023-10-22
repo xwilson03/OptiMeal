@@ -7,8 +7,8 @@ body {
 }
 
 .outletContainer {
-    width: 100vw;
-    height: 100vh;
+    width: 95vw;
+    height: 85vh;
     display: flex;
     overflow: scroll;
     scroll-snap-type: mandatory;
