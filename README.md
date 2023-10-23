@@ -1,7 +1,6 @@
 # OptiMeal
 
 We wanted to create a project that would help us in our everyday lives since we have been tired of not knowing what we wanted to eat for our next meal, and we want to stay healthy and not eat out at restaurants often. A lot of thought goes into planning out a week's worth of meals while simultaneously trying to balance your macronutrient intake, so we created this app to streamline and automate this process for our own personal use.
-What it does
 
 OptiMeal generates 21 unique meals for a week by pulling from a browsable recipe database with filters for dietary restrictions, cuisines, and macronutrient targets. Users can view each recipe to learn more about macros, the ingredients used to make it (in order to compile a shopping list), and the steps to making it.
 
@@ -11,10 +10,10 @@ URL: https://ec2-3-137-202-160.us-east-2.compute.amazonaws.com/
 
 Technologies Used
 - React: Front-end development
-- Node.js: Server-side development
-- MongoDB: Database management
-- Express.js: Web application framework
-- Spoonacular: Application Programming Interface
+- Express: Server-side development
+- MongoDB/Mongoose: Database management
+- Spoonacular: API used for recipe data
+- Node.js: JavaScript runtime environment
 - Nginx: Web server software 
 
 <p align = "center">
