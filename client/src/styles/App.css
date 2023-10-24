@@ -10,3 +10,17 @@ body {
     width: 100vw;
     height: 90vh;
 }
+
+.loader-container {
+    display: flex;
+    height: 100vh;
+    width: 100vh;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    
+    padding-left: 30%;
+    padding-right: 30%;
+    /* Use the full viewport height for vertical centering */
+}

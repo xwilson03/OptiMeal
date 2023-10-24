@@ -1,7 +1,8 @@
 import { Box, Card, Stack } from "@mui/material";
 import { useState, useEffect } from "react";
-import "../styles/Planner.css"
-import axios from 'axios'
+import "../styles/Planner.css";
+import HashLoader from "react-spinners/HashLoader";
+import axios from 'axios';
 
 const defaultMeals = {"breakfast": "default-breakfast",
                       "lunch":     "default-lunch",
@@ -10,6 +11,7 @@ const defaultMeals = {"breakfast": "default-breakfast",
 function DayCard(props) {
 
     const [meals, setMeals] = useState(defaultMeals);
+    
 
     return (
         <Card className="dayCard">
@@ -35,19 +37,43 @@ function DayCard(props) {
 }
 
 function Planner() {
+  const [loading,setLoading] = useState(true);
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLoading(false);
+    },1000);
+  },[]);
 
   useEffect(() => {
       (async () => {
         const cardData = await axios.get("https://api.spoontacular.com/mealplanner/generate")
           .then( (res) => {
+            
           return res.data;
-          });
+          })
+          .catch((err)=>{
+            
+            console.log("Error! Response failed to load:(");
+          })
+          
+          
+          ;
       })();
     
       return () => {};
     }, []);
 
   return (
+    loading ? 
+            <div className="loader-container">
+            <HashLoader 
+              color={"#317196"}
+              loading={loading}
+              size={200}>
+              </HashLoader> 
+            </div>
+            :
     <>
         <Box className="planner">
             <Stack direction="row" spacing={3}>
